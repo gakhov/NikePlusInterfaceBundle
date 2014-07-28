@@ -1,0 +1,14 @@
+parameters:
+    ag_nikeplus_interface.client_id: ''
+    ag_nikeplus_interface.client_secret: ''
+    ag_nikeplus_interface.callback: ''
+    ag_nikeplus_interface.configuration: []
+services:
+    ag.nikeplus.interface:
+        class:     AG\NikePlusInterfaceBundle\Nike\ApiGatewayFactory
+        arguments:
+            - %ag_nikeplus_interface.client_id%
+            - %ag_nikeplus_interface.client_secret%
+            - %ag_nikeplus_interface.callback%
+            - %ag_nikeplus_interface.configuration%
+            - @router
